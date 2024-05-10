@@ -1,0 +1,30 @@
+{
+    "autodiscover": "false",
+    "extends": [ "config:base",":disableDependencyDashboard"],
+    "enabledManagers": ["kubernetes","helm","terraform"],
+    "kubernetes": { "fileMatch": ["\\.ya?ml$"] },
+    "packageRules": [
+      {
+        "enabled": true,
+        "groupName": "Kubernetes Api",
+        "matchDatasources": ["kubernetes-api"]
+      },
+      {
+        "enabled": true,
+        "groupName": "helm",
+        "matchPackagePatterns": ["*"],
+        "matchDatasources": ["helm"]
+      },
+      {
+        "enabled": true,
+        "groupName": "Terraform",
+        "matchPackagePatterns": ["*"],
+        "matchDatasources": ["terraform-module","terraform-provider"]
+      },
+      {
+        "enabled": true,
+        "groupName": "Kubernetes Api",
+        "matchDatasources": ["kubernetes-api"]
+      }
+    ]
+    }
