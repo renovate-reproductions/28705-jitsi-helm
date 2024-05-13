@@ -1,22 +1,4 @@
 {
     "enabledManagers": ["kubernetes","helmv3"],
-    "kubernetes": { "fileMatch": ["\\.ya?ml$"] },
-    "packageRules": [
-      {
-        "enabled": true,
-        "groupName": "Kubernetes Api",
-        "matchDatasources": ["kubernetes-api"]
-      },
-      {
-        "enabled": true,
-        "groupName": "helm",
-        "matchPackagePatterns": ["*"],
-        "matchDatasources": ["helm"]
-      },
-      {
-        "enabled": true,
-        "groupName": "Kubernetes Api",
-        "matchDatasources": ["kubernetes-api"]
-      }
-    ]
+    "kubernetes": { "fileMatch": ["\\.ya?ml$"] }
     }
