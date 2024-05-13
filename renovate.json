@@ -1,5 +1,5 @@
 {
-    "enabledManagers": ["kubernetes","helm-requirements", "helm-values","helmv3"],
+    "enabledManagers": ["kubernetes","helmv3"],
     "kubernetes": { "fileMatch": ["\\.ya?ml$"] },
     "packageRules": [
       {
