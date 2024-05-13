@@ -2,42 +2,6 @@
 
 This repository serves as an example of an issue with the kube-api datasource. When renovate scans the repository, it does not account for the templating used in Helm charts, resulting in it not scanning YAML. As a result, we want to update the API versions, but the templating of Helm charts hinders Renovate from detecting and correctly updating dependencies located in YAML files.
 
-## Global Config
-
-```
-{
-    "autodiscover": "false",
-    "repositories": ["jitsi-helm"],
-    "extends": [ "config:base",":disableDependencyDashboard"],
-    "enabledManagers": ["kubernetes","helm","terraform"],
-    "kubernetes": { "fileMatch": ["\\.ya?ml$"] },
-    "packageRules": [
-      {
-        "enabled": true,
-        "groupName": "Kubernetes Api",
-        "matchDatasources": ["kubernetes-api"]
-      },
-      {
-        "enabled": true,
-        "groupName": "helm",
-        "matchPackagePatterns": ["*"],
-        "matchDatasources": ["helm"]
-      },
-      {
-        "enabled": true,
-        "groupName": "Terraform",
-        "matchPackagePatterns": ["*"],
-        "matchDatasources": ["terraform-module","terraform-provider"]
-      },
-      {
-        "enabled": true,
-        "groupName": "Kubernetes Api",
-        "matchDatasources": ["kubernetes-api"]
-      }
-    ]
-    }
-
-```
 
 ## Environment variables
 
