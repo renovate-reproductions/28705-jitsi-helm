@@ -1,7 +1,7 @@
 {
     "autodiscover": "false",
     "extends": [ "config:base",":disableDependencyDashboard"],
-    "enabledManagers": ["kubernetes","terraform"],
+    "enabledManagers": ["kubernetes","helm","terraform"],
     "kubernetes": { "fileMatch": ["\\.ya?ml$"] },
     "packageRules": [
       {
