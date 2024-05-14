@@ -1,4 +1,5 @@
 {
+    "dependencyDashboard": true,
     "enabledManagers": ["kubernetes","helmv3"],
     "kubernetes": { "fileMatch": ["\\.ya?ml$"] }
     }
